@@ -1,12 +1,21 @@
+jQuery.sap.registerModulePath("zsesp_launchpad_css", "css/");
+jQuery.sap.includeStyleSheet(sap.ui.resource("zsesp_launchpad_css", "style.css"));	
+
 sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
 ], function (MessageToast, Controller, JSONModel) {
 	"use strict";
+	
+	let oController;
+	let oRouter
 
 	return Controller.extend("ns.integration_card_component.Card", {
 		onInit: function () {
+			oController = this;
+			oRouter = this.getOwnerComponent().getRouter();
+
 			var oModel = new JSONModel({
 				"cities": [
 					{
@@ -34,12 +43,16 @@ sap.ui.define([
 						"key": "SF"
 					},
 					{
-						"text": "Vienna",
+						"text": "Viennas",
 						"key": "VN"
 					}
 				]
 			});
 			this.getView().setModel(oModel);
+			oRouter.navTo("detailview");
+		},
+		onBookPress: function (oEvent) {
+			oRouter.navTo("detailview")
 		}
 	});
 });

@@ -36,6 +36,34 @@
 					"Card.controller.js"
 				]
 			}
+		},
+		"routing" : {
+			"routes": [
+				{
+					"pattern": "",
+					"name" : "home",
+					"target" : "home"
+				},
+				{
+					"pattern": "detailview",
+					"name": "detailview",
+					"target": "detailview"
+				}
+			],
+			"targets": {
+				"home": {
+					"viewName": "ns.integration_card_component.View",
+					"type": "XML",
+					"async": true,
+					"id": "app"
+				},
+				"detailview": {
+					"viewName": "ns.integration_card_component.Detailview",
+					"type": "XML",
+					"async": true,
+					"id": "detailview"
+				}
+			}
 		}
 	},
 	"sap.card": {
@@ -43,10 +71,10 @@
         "designtime": "dt/configuration",
 		"header": {
 			"icon": {
-				"src": "sap-icon://bus-public-transport"
+				"src": "sap-icon://customer"
 			},
-			"title": "Buy your bus ticket online",
-			"subTitle": "You’ll receive an email with a QR code. No need to print!"
+			"title": "Customer Account",
+			"subTitle": "Information for our customer"
 		}
 	},
     "sap.platform.mobilecards": {

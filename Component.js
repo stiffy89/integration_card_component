@@ -7,6 +7,8 @@ sap.ui.define(['sap/ui/core/UIComponent'],
 		metadata : {
 			manifest: "json"
 		}
+
+		
 	});
 
 	return Component;

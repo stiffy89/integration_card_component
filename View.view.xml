@@ -36,6 +36,7 @@
         <DatePicker placeholder="Choose Date ..."/>
         <Toolbar style="Clear" class="sapUiTinyMarginTop" >
             <ToolbarSpacer/>
+            <Text id="TestText" class='sampletext' text='Hello'/>
             <Button text="Book" press="onBookPress" type="Emphasized" />
         </Toolbar>
     </VBox>
