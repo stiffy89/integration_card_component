@@ -18,7 +18,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "ns.integration_card_component.View",
+			"viewName": "ns.integration_card_component.App",
 			"type": "XML",
 			"async": true,
 			"id": "app"
@@ -38,32 +38,40 @@
 			}
 		},
 		"routing" : {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"path": "ns.integration_card_component",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"async": true
+			},
 			"routes": [
 				{
 					"pattern": "",
-					"name" : "home",
-					"target" : "home"
-				},
+					"name": "home",
+					"target": "home"
+			 	},
 				{
-					"pattern": "detailview",
-					"name": "detailview",
-					"target": "detailview"
+					"pattern": "detail",
+					"name": "detail",
+					"target": "detail"
 				}
 			],
-			"targets": {
+			 "targets": {
 				"home": {
-					"viewName": "ns.integration_card_component.View",
-					"type": "XML",
-					"async": true,
-					"id": "app"
+					"id": "home",
+					"name": "Home",
+					"level" : 1
 				},
-				"detailview": {
-					"viewName": "ns.integration_card_component.Detailview",
-					"type": "XML",
-					"async": true,
-					"id": "detailview"
+				"detail": {
+					"id": "detail",
+					"name": "Detail",
+					"level" : 1
 				}
-			}
+			 }
 		}
 	},
 	"sap.card": {

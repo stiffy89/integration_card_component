@@ -1,0 +1,12 @@
+<mvc:View
+	xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    width="100%"
+    controllerName="ns.integration_card_component.Card"
+	displayBlock="true">
+	<Shell>
+		<App id="app"/>
+	</Shell>
+</mvc:View>

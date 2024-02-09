@@ -49,10 +49,14 @@ sap.ui.define([
 				]
 			});
 			this.getView().setModel(oModel);
-			oRouter.navTo("detailview");
 		},
-		onBookPress: function (oEvent) {
-			oRouter.navTo("detailview")
+		nextPage: function (oEvent) {
+			console.log('hello')
+			oRouter.navTo("detail")
+		},
+		onBackPress: function () {
+			console.log('back')
+			oRouter.navTo("home")
 		}
 	});
 });
