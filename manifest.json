@@ -58,6 +58,11 @@
 					"pattern": "detail",
 					"name": "detail",
 					"target": "detail"
+				},
+				{
+					"pattern" : "detailedit",
+					"name" : "detailedit",
+					"target" : "detailedit"
 				}
 			],
 			 "targets": {
@@ -69,6 +74,11 @@
 				"detail": {
 					"id": "detail",
 					"name": "Detail",
+					"level" : 1
+				},
+				"detailedit" : {
+					"id" : "detailedit",
+					"name" : "DetailEdit",
 					"level" : 1
 				}
 			 }
@@ -83,6 +93,14 @@
 			},
 			"title": "Customer Account",
 			"subTitle": "Information for our customer"
+		},
+		"configuration" : {
+			"destinations" : {
+				"ES5" : {
+					"name" : "ES5",
+					"defaultUrl" : "/sap/opu/odata/iwbep/GWSAMPLE_BASIC"
+				}
+			}
 		}
 	},
     "sap.platform.mobilecards": {

@@ -7,6 +7,6 @@
     controllerName="ns.integration_card_component.Card"
 	displayBlock="true">
 	<Shell>
-		<App id="app"/>
+		<App id="app" class="appShell"/>
 	</Shell>
 </mvc:View>

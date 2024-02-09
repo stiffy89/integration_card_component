@@ -9,46 +9,33 @@ sap.ui.define([
 	"use strict";
 	
 	let oController;
-	let oRouter
+	let oRouter;
+	let oCard;
 
 	return Controller.extend("ns.integration_card_component.Card", {
 		onInit: function () {
 			oController = this;
 			oRouter = this.getOwnerComponent().getRouter();
+			oCard = this.getOwnerComponent().oCard;
+			console.log(oCard);
 
-			var oModel = new JSONModel({
-				"cities": [
-					{
-						"text": "Berlin",
-						"key": "BR"
-					},
-					{
-						"text": "London",
-						"key": "LN"
-					},
-					{
-						"text": "Madrid",
-						"key": "MD"
-					},
-					{
-						"text": "Prague",
-						"key": "PR"
-					},
-					{
-						"text": "Paris",
-						"key": "PS"
-					},
-					{
-						"text": "Sofia",
-						"key": "SF"
-					},
-					{
-						"text": "Viennas",
-						"key": "VN"
-					}
-				]
-			});
-			this.getView().setModel(oModel);
+			//show skeleton screen on the card
+			oCard.showLoadingPlaceholders();
+
+			oCard.request({
+				url: "{{destinations.ES5}}/ContactSet",
+				parameters: {
+					"$format": "json",
+					"$top": 10
+				},
+				method: "GET",
+			}).then(function(oRes){
+				console.log(oRes);
+			}).catch(function(error){
+				console.log(error);
+			})
+
+
 		},
 		nextPage: function (oEvent) {
 			console.log('hello')

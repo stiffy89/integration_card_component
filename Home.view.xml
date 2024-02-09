@@ -2,10 +2,46 @@
 	controllerName="ns.integration_card_component.Card"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
+	<Page title="Suppliers" class="sapUiResponsiveContentPadding">
 		<content>
-			<Button id="displayNotFoundBtn" text="Next Page" press="nextPage" class="sapUiTinyMarginEnd"/>
-			
+			<Table 
+				id="homePageTable"
+				items="{
+					path: '/'
+				}"
+			>
+				<infoToolbar>
+					<OverflowToolbar>
+						<Label text="List of available suppliers" />
+					</OverflowToolbar>
+				</infoToolbar>
+				<columns>
+					<Column
+						width="4em">
+						<Text text="First Name" />
+					</Column>
+					<Column
+						width="4em">
+						<Text text="Last Name" />
+					</Column>
+					<Column
+						width="4em">
+						<Text text="Phone Number" />
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem vAlign="Middle">
+						<cells>
+							<Text
+								text="{FirstName}" />
+							<Text
+								text="{LastName}" />
+							<Text
+								text="{PhoneNumber}" />
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
 		</content>
 	</Page>
 </mvc:View>

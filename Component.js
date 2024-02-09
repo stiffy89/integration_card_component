@@ -14,7 +14,11 @@ sap.ui.define(['sap/ui/core/UIComponent'],
 
             // create the views based on the url/hash
             this.getRouter().initialize();
-        }
+        },
+
+		onCardReady: function (oCard) {
+			this.oCard = oCard;
+		}
 
 	});
 
