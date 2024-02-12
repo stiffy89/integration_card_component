@@ -87,8 +87,7 @@
 	"sap.card": {
 		"type": "Component",
         "designtime": "dt/configuration",
-		"header": {
-			"icon": {
+		"header": {"icon": {
 				"src": "sap-icon://customer"
 			},
 			"title": "Customer Account",
@@ -98,7 +97,7 @@
 			"destinations" : {
 				"ES5" : {
 					"name" : "ES5",
-					"defaultUrl" : "/sap/opu/odata/iwbep/GWSAMPLE_BASIC"
+					"defaultUrl" : "/sap/opu/odata/sap/EPM_REF_APPS_SHOP_SRV/"
 				}
 			}
 		}
