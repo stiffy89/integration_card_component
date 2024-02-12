@@ -1,11 +1,44 @@
 <mvc:View
-	controllerName="ns.integration_card_component.Card"
+	id="detailView"
+	controllerName="ns.integration_card_component.Detail"
 	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
+	<Page 
+		title="{i18n>homePageTitle}" 
+		class="sapUiResponsiveContentPadding"
+		showNavButton="true"
+		navButtonPress="onNavButtonPress"
+	>
 		<content>
-			<Text text="Sample"/>
-			<Button text="Back" press="onBackPress"/>
+			<f:SimpleForm
+				editable="false"
+				layout="ResponsiveGridLayout"
+				title="Address"
+				labelSpanXL="3"
+				labelSpanL="3"
+				labelSpanM="3"
+				labelSpanS="12"
+				adjustLabelSpan="false"
+				emptySpanXL="4"
+				emptySpanL="4"
+				emptySpanM="4"
+				emptySpanS="0"
+				columnsXL="1"
+				columnsL="1"
+				columnsM="1"
+				singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Name" />
+				<Text text="{/FirstName} {/LastName}" />
+				<Label text="Sex" />
+				<Text text="{/Sex}" />
+				<Label text="Phone Number" />
+				<Text text="{/PhoneNumber}" />
+				<Label text="Email Address" />
+				<Text text="{/EmailAddress}" />
+			</f:content>
+		</f:SimpleForm>
 		</content>
 	</Page>
 </mvc:View>

@@ -1,5 +1,6 @@
 <mvc:View
-	controllerName="ns.integration_card_component.Card"
+	id="homeView"
+	controllerName="ns.integration_card_component.Home"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 	<Page title="Suppliers" class="sapUiResponsiveContentPadding">
@@ -30,7 +31,11 @@
 					</Column>
 				</columns>
 				<items>
-					<ColumnListItem vAlign="Middle">
+					<ColumnListItem 
+						type="Active" 
+						vAlign="Middle"
+						press="toSupplierDetail"
+					>
 						<cells>
 							<Text
 								text="{FirstName}" />
