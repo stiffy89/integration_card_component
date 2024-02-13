@@ -20,11 +20,9 @@ sap.ui.define([
 			oComponent = this.getOwnerComponent();
 			oRouter = this.getOwnerComponent().getRouter();
 			oCard = this.getOwnerComponent().oCard;
-			
-			//show skeleton screen on the card
-			oCard.showLoadingPlaceholders();
+		
 
-			/* let aResults = [
+			let aResults = [
 				{
 					"__metadata": {
 						"id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ContactSet(guid'42010a00-03d8-1ede-b2a8-43a4f5599f7d')",
@@ -99,22 +97,29 @@ sap.ui.define([
 						}
 					}
 				}
-			]; */
+			];
 
-			
-
-			/* let oModel = new sap.ui.model.json.JSONModel(aResults);
+		
+			let oModel = new sap.ui.model.JSONModel(aResults);
 			let oView = oController.getView();
-			oView.setModel(oModel); */
+			oView.setModel(oModel); 
 
-			 oCard.request({
-				url: "{{destinations.ES5}}/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ContactSet",
+		/*	oCard.request({
+				url: "https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ContactSet",
 				parameters: {
 					"$format": "json",
 					"$top": 10
 				},
 				method: "GET",
+				headers: {
+					"Authorization" : "Basic czAwMjIwNjA1MDY6QmVlZkNoZWVrczQ0",
+					"Accept-Encoding" : "gzip, deflate, br",
+					"Connection" : "keep-alive",
+					"Cookie" : "sap-usercontext=sap-client=002; MYSAPSSO2=AjQxMDMBABhTADAAMAAyADIAMAA2ADAANQAwADYAIAACAAYwADAAMgADABBFAFMANQAgACAAIAAgACAABAAYMgAwADIANAAwADIAMQAzADAAMQA0ADAABQAEAAAACAYAAlgACQACRQD%2fATkwggE1BgkqhkiG9w0BBwKgggEmMIIBIgIBATELMAkGBSsOAwIaBQAwCwYJKoZIhvcNAQcBMYIBATCB%2fgIBATBUMEgxCzAJBgNVBAYTAkRFMQ8wDQYDVQQKEwZTQVAtQUcxDDAKBgNVBAsTA0VTNTEaMBgGA1UEAwwRKi5kbXp3ZGYuc2FwLmNvcnACCAogIgIiB0YBMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yNDAyMTMwMTQwMzRaMCMGCSqGSIb3DQEJBDEWBBTXk8RAtOgyOdF1EtU8Tt0zhsmfXTAJBgcqhkjOOAQDBC4wLAIUT%21kYJ73pTdniqW0B0gHZCSh10YICFA1ddwVUwxmHnyD365wGQtZPCDA7; SAP_SESSIONID_ES5_002=jeGvl5_Cze26Ecbr_Z4zwuEwbRHKEBHun4hCAQoAA9g%3d"
+				}
 			}).then(function(oRes){
+
+				console.log(oRes);
 
 				let aResults = oRes.d.results;
 				let oModel = new sap.ui.model.JSONModel(aResults);
@@ -130,7 +135,7 @@ sap.ui.define([
 				});
 				oCard.hideLoadingPlaceholders();
 			}) 
-
+			*/
 
 		},
 		toSupplierDetail: function (oEvent) {

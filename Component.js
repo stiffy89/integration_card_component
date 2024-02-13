@@ -18,10 +18,6 @@ sap.ui.define(['sap/ui/core/UIComponent'],
 
 		onCardReady: function (oCard) {
 			this.oCard = oCard;
-
-			/* oCard.resolveDestination("ES5").then(function(url){
-				console.log(url);
-			}) */
 		}
 
 	});
