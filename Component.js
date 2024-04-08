@@ -4,9 +4,9 @@ sap.ui.define(['sap/ui/core/UIComponent'],
 
 	var Component = UIComponent.extend("ns.integration_card_component.Component", {
 
-		metadata : {
+		/* metadata : {
 			manifest: "json"
-		},
+		}, */
 
 		init: function () {
             // call the init function of the parent

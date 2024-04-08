@@ -6,7 +6,7 @@
 		"title": "Component sample card",
 		"subTitle": "",
 		"applicationVersion": {
-			"version": "1.0.5"
+			"version": "1.1.2"
 		}
 	},
 	"sap.ui": {
@@ -33,6 +33,13 @@
 			"libs": {
 				"sap.m": {}
 			}
+		},
+		"resources" : {
+			"css" : [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing" : {
 			"config": {
@@ -74,6 +81,9 @@
 	"sap.card": {
 		"type": "Component",
         "designtime": "dt/configuration",
+		"content": {
+			"minHeight": "500px"
+		},
 		"header": {"icon": {
 				"src": "sap-icon://customer"
 			},
@@ -82,7 +92,7 @@
 		},
 		"configuration" : {
 			"destinations" : {
-				"ES5" : {
+				"sapes5" : {
 					"name" : "ES5"
 				}
 			}

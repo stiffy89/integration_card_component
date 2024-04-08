@@ -1,6 +1,3 @@
-jQuery.sap.registerModulePath("zsesp_launchpad_css", "css/");
-jQuery.sap.includeStyleSheet(sap.ui.resource("zsesp_launchpad_css", "style.css"));	
-
 sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/core/mvc/Controller",
